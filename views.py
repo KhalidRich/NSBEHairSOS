@@ -3,5 +3,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return "This is our homepage"
+  url_for('static', filename='css/bootstrap.css')
+  return render_template('index.html')
 
