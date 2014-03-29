@@ -5,7 +5,9 @@
     <div class="page-header">
   <h2>Get trusted advice: <small>What are you looking for?</small></h1>
 </div>
-    <p><a class="btn btn-default btn-lg" role="button" href="/search">Beauty Stylist</a>
-      <a class="btn btn-primary btn-lg" role="button" href="/search">Barber</a></p>
+  <form action="/maps" method="post">
+    <p><input type="text" name="location" placeholder="Where do you want to look?"></p>
+    <p><button name="search_type" class="btn btn-default btn-lg" role="button" action="/maps">Beauty Stylist</button>
+      <button name="search_type" class="btn btn-primary btn-lg" role="button" action="/maps">Barber</button></p>
   </header>
 {% endblock %}

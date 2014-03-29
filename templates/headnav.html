@@ -4,10 +4,11 @@
   <title>HAIR SOS</title>
   <link rel="shortcut icon" href="favicon.ico"/>
   <link href="static/css/bootstrap.css" rel="stylesheet" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="static/js/bootstrap.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script src="jquery.js"></script>
+  <script src="jquery.js"></script>
 </head>
   
 <body>
@@ -27,24 +28,25 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-collapse collapse">
+          
           <form class="navbar-form navbar-right" role="form">
+            
             <div class="form-group">
+            {% if not user %}
               Login:
-              <input type="text" placeholder="Email" class="form-control">
+              <!-- <input type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Register <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="user.html">Create a Reviewer Profile</a></li>
-    <li><a href="professional.html">Create a Hairdresser Profile</a></li>
-  </ul>
-</div>
+            </div> -->
+            
+              <a class="btn btn-success" href="{{sign_in_url}}">Sign in</a>
+            {% else %}
+              <a class="btn" href="professional"> Create a Hairdresser Profile </a>
+              <a class="btn btn-success" href="{{sign_out_url}}"> Sign Out</a>
+            {% endif %}
+          </div>
+          </div>
           </form>
     </div><!--/.navbar-collapse -->
     
