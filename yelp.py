@@ -1,20 +1,21 @@
 import rauth
 import time
 
-def main():
+def search(store_type, location):
 	#locations = [(39.98,-82.98),(42.24,-83.61),(41.33,-89.13)]
-	location = ["Atlanta, Georgia", "Columbia University", "Alabama"]	
 	api_calls = []
+	results = []
 	#for lat,long in locations:
-	for loc in location:
-		params = getTopBarbers('barber shop',loc)
-		api_calls.append(get_results(params))
-		#Be a good internet citizen and rate-limit yourself
-		time.sleep(1.0)
-	for shop in api_calls[0][u'businesses']:
-		print shop[u'name']
-	#print api_calls[1][u'businesses'][0][u'name']
-	##Do other processing	
+	params = getTopBarbers('barber shop',location)
+	api_calls.append(get_results(params))
+
+	print api_calls[0][u'businesses'][0]
+
+
+
+	for b in api_calls[0][u'businesses']:
+		{"name": b[u'name'], "address": ' '.join(b[u'location'][u'display_address'])}
+	return api_calls
 
 def getTopBarbers(store_type, addr):
 	#See the Yelp API for more details

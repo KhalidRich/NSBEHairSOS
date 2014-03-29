@@ -3,47 +3,41 @@
       <header> <h1>Register as a Hairdresser </h1> </header>
       <br>
 
-      <center><form class="form-inline" role="form">
+      <center><form class="form-inline" role="form" action="professional" method="post">
           <div class="form-group">
           <h2><label>Name: </label>
-            <input type="text" class="form-control" placeholder="Business/Name">
+            <input name="name" type="text" class="form-control" placeholder="Business/Name">
         </div></h2>
         <br>
         <br>
         <div class="form-group">
           <h2><label>Email: </label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         </div></h2>
         <br>
         <br>
         <div class="form-group">
-          <h2><label>Password: </label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div></h2>
-        <br>
-        <br>
-          <div class="form-group">
             <h2><label for="exampleInputEmail1">Location: </label>
-          <input type="text" class="form-control" placeholder="Ex: 5555 Broadway Ave NY, NY 10027">
+          <input name="location" type="text" class="form-control" placeholder="Ex: 5555 Broadway Ave NY, NY 10027">
         </div></h2>
          <br>
         <br>
           <div class="form-group">
             <h2><label for="exampleInputEmail1">Phone Number: </label>
-          <input type="text" class="form-control" placeholder="Ex: 555-555-5555">
+          <input name="phone_number" type="text" class="form-control" placeholder="Ex: 555-555-5555">
         </div></h2>
           <br>
           <br>
             <div class="form-group">
             <h2><label for="exampleInputEmail1">Website: </label>
-          <input type="text" class="form-control" placeholder="optional">
+          <input name="website" type="text" class="form-control" placeholder="optional">
         </div></h2>
           <br>
           <br>
         
           <div class="form-group">
             <h2><label>Hours of Operation: </label>
-              <select class="form-control">
+              <select name="hours_of_operation" class="form-control">
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -99,13 +93,13 @@
   </select></h2>
               <div class="checkbox">
     <label>
-      <input type="checkbox"> Mon
-      <input type="checkbox"> Tues
-      <input type="checkbox"> Wed
-      <input type="checkbox"> Thurs
-      <input type="checkbox"> Fri
-      <input type="checkbox"> Sat
-      <input type="checkbox"> Sun
+      <input type="checkbox" value="1"> Mon
+      <input type="checkbox" value="1"> Tues
+      <input type="checkbox" value="1"> Wed
+      <input type="checkbox" value="1"> Thurs
+      <input type="checkbox" value="1"> Fri
+      <input type="checkbox" value="1"> Sat
+      <input type="checkbox" value="1"> Sun
     </label>
   </div>
             </div></h2>

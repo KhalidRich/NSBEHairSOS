@@ -17,8 +17,8 @@ class Stylist(ndb.Model):
   desc = ndb.StringProperty()
 
 class Review(ndb.Model):
-  userid = ndb.IntegerProperty()
-  stylistid = ndb.IntegerProperty()
+  user = ndb.UserProperty()
+  reviewed = ndb.UserProperty()
   rating = ndb.IntegerProperty()
   review = ndb.StringProperty()
   wait_time = ndb.IntegerProperty()
