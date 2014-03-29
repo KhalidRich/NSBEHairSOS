@@ -29,6 +29,14 @@ header {
   margin: 0 auto;
   text-align: center;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#map{
+  height: 100%;
+  margin: 0;
+}
 
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
