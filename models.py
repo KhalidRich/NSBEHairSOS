@@ -1,30 +1,27 @@
-from views import db
+from google.appengine.ext import ndb
 
-class User(db.Model):
-  _id = db.Column(db.Integer, primary_key=True)
-  email = db.Column(db.String(120), unique=True)
-  name = db.Column(db.String(51))
-  location = db.Column(db.String(200))
+class User(ndb.Model):
+  email = ndb.StringProperty()
+  name = ndb.StringProperty()
+  location = ndb.StringProperty()
 
-class Stylist(db.Model):
-  _id = db.Column(db.Integer, primary_key=True)
-  email = db.Column(db.String(120), unique=True)
-  name = db.Column(db.String(51))
-  location = db.Column(db.String(200))
-  website = db.Column(db.String(55))
-  phone_number = db.Column(db.String(11))
-  open_hours = db.Column(db.String(9))
-  close_hours = db.Column(db.String(9))
-  days_open = db.Column(db.Integer)
-  desc = db.Column(db.String(255))
+class Stylist(ndb.Model):
+  email = ndb.StringProperty()
+  name = ndb.StringProperty()
+  location = ndb.StringProperty()
+  website = ndb.StringProperty()
+  phone_number = ndb.StringProperty()
+  open_hours = ndb.StringProperty()
+  close_hours = ndb.StringProperty()
+  days_open = ndb.IntegerProperty()
+  desc = ndb.StringProperty()
 
-class Review(db.Model):
-  _id = db.Column(db.Integer, primary_key=True)
-  userid = db.Column(db.Integer, db.ForeignKey('user._id'))
-  stylistid = db.Column(db.Integer, db.ForeignKey('stylist._id'))
-  rating = db.Column(db.Integer)
-  review = db.Column(db.String(255))
-  wait_time = db.Column(db.Integer)
-  cost = db.Column(db.Integer)
+class Review(ndb.Model):
+  userid = ndb.IntegerProperty()
+  stylistid = ndb.IntegerProperty()
+  rating = ndb.IntegerProperty()
+  review = ndb.StringProperty()
+  wait_time = ndb.IntegerProperty()
+  cost = ndb.IntegerProperty()
 
 

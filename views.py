@@ -1,8 +1,9 @@
 from flask import Flask, render_template, flash, redirect, session, url_for, request, g
-from flask.ext.SQLAlchemy import SQLAlchemy
+#from flask.ext.SQLAlchemy import SQLAlchemy
+import webapp2, models
 
 app = Flask(__name__)
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
